@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mittagsplan</title>
+    
+    <style>
+        div.fisk{
+            background-color: cornflowerblue;
+        }
+        div.suppe{
+            background-color: darkgoldenrod;
+        }
+        div.ofen{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<h1>Wilkommen bei diesem Mittagsplangenerator!</h1>
+    <div id="Fisk" class='fisk'>
+
+        <h3>Fisch: <button onclick="velgFisk()">Schlag was vor!</button></h3> 
+        <p id="valgFisk"></p>
+        
+    </div>
+    <div id="Suppe" class='suppe'>
+
+        <h3>Suppe:  <button onclick="velgSuppe()">Schlag was vor!</button></h3> 
+        <p id="valgSuppe"></p>
+        
+    </div>
+    <div id="ofen" class='ofen'>
+
+        <h3>Ofen:  <button onclick="velgOfen()">Schlag was vor!</button></h3> 
+        <p id="valgOfen"></p>
+        
+    </div>
+    
+    <script>
+        
+        function velgFisk(){
+
+            let tall = Math.floor((Math.random() * 12) + 1);
+
+            tall;
+
+            if (tall == 1) document.getElementById('valgFisk').innerHTML = ' Fischboletten!';
+            else if (tall == 2) document.getElementById('valgFisk').innerHTML = ' Plukkfisk!';
+            else if (tall == 3) document.getElementById('valgFisk').innerHTML = ' Torskenuggets!';
+            else if (tall == 4) document.getElementById('valgFisk').innerHTML = ' Lachs mit Ofengemüse!'
+            else if (tall == 6) document.getElementById('valgFisk').innerHTML = ' Kartoffelauflauf mit Lachs!';
+            else if (tall == 7) document.getElementById('valgFisk').innerHTML = ' Fiskegrateng!';
+            else if (tall == 8) document.getElementById('valgFisk').innerHTML = ' Kokt torsk!';
+            else if (tall == 9) document.getElementById('valgFisk').innerHTML = ' Kveite!';
+            else if (tall == 10) document.getElementById('valgFisk').innerHTML = ' Klippfisk!';
+            else if (tall == 11) document.getElementById('valgFisk').innerHTML = ' Fischsuppe!';
+            else if (tall == 12) document.getElementById('valgFisk').innerHTML = ' Fischburger!';
+            else document.getElementById('valgFisk').innerHTML = '';
+
+
+        }
+
+        function velgSuppe(){
+            
+            let tall = Math.floor((Math.random() * 12) + 1);
+
+            tall;
+
+            if (tall == 1) document.getElementById('valgSuppe').innerHTML = ' Weisse Bohnen Tomatensuppe!';
+            else if (tall == 2) document.getElementById('valgSuppe').innerHTML = ' Linsensuppe!';
+            else if (tall == 3) document.getElementById('valgSuppe').innerHTML = ' Kartoffelsuppe!';
+            else if (tall == 4) document.getElementById('valgSuppe').innerHTML = ' Nudel-Gemüsesuppe!'
+            else if (tall == 6) document.getElementById('valgSuppe').innerHTML = ' Kürbissuppe!';
+            else if (tall == 7) document.getElementById('valgSuppe').innerHTML = ' Kartoffel-Lauchsuppe!';
+            else if (tall == 8) document.getElementById('valgSuppe').innerHTML = ' Tomatensuppe mit Ei!';
+            else if (tall == 9) document.getElementById('valgSuppe').innerHTML = ' Möhren-Süskartoffelsuppe!';
+            else if (tall == 10) document.getElementById('valgSuppe').innerHTML = ' Chinesische Tomatensuppe!';
+            else if (tall == 11) document.getElementById('valgSuppe').innerHTML = ' Blumenkohlsuppe!';
+            else if (tall == 12) document.getElementById('valgSuppe').innerHTML = ' Rotebeetesuppe!';
+            else document.getElementById('valgSuppe').innerHTML = '';
+        }
+        function velgOfen(){
+            
+            let tall = Math.floor((Math.random() * 10) + 1);
+
+            tall;
+
+            if (tall == 1) document.getElementById('valgOfen').innerHTML = ' Moussaka!';
+            else if (tall == 2) document.getElementById('valgOfen').innerHTML = ' Lasagne!';
+            else if (tall == 3) document.getElementById('valgOfen').innerHTML = ' Ofenhünchen!';
+            else if (tall == 4) document.getElementById('valgOfen').innerHTML = ' Lachs mit Ofengemüse!'
+            else if (tall == 6) document.getElementById('valgOfen').innerHTML = ' Mudelauflauf!';
+            else if (tall == 7) document.getElementById('valgOfen').innerHTML = ' Kartoffelauflauf!';
+            else if (tall == 8) document.getElementById('valgOfen').innerHTML = ' Encheladas a la Precilla!';
+            else if (tall == 9) document.getElementById('valgOfen').innerHTML = ' Spinatlasagne!';
+            else if (tall == 10) document.getElementById('valgOfen').innerHTML = ' Lachslasagne!';
+
+            else document.getElementById('valgOfen').innerHTML = '';
+        }
+
+    </script>
+</body>
+</html>

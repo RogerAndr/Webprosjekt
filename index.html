@@ -3,9 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Webprosjekt</title>
+
+    <style>
+        div.del1{
+            background-color: dimgray;
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+        div.del2{
+            background-color: blueviolet;
+
+        }
+    </style>
+
 </head>
 <body>
-    <input type="text" onclick="console.log('onclick ' + this.value)" oninput="console.log('oninput ' + this.value)" onchange="console.log('onchange ' + this.value)">
+    <div class="del1">
+    <h1 id='overskrift'></h1>
+    <br />
+    <br />
+    <h3 id='underskrift'></h3>
+    <br />
+    <input type="text" id='tekstFraBruker' oninput="skriv(this)"> <button onclick="registrer()">Registrer navn</button>
+    <i id='langTekst'></i>
+    <p id='tellingAvTekstLengde'></p>
+
+    <p id='tellingAvAntTrykk'></p>
+    <ul>
+        <li id='nummer1'></li>
+        <li id='nummer2'></li>
+        <li id='nummer3'></li>
+    </ul>
+    <button id='resetListe' onclick="tilbakestill()">Tilbakestill listen</button>
+    </div>
+<br>
+<br>
+    <div class="del2">
+        <input type="checkbox" id="Tyskland" onchange="beskjed()">Tyskland <br>
+        <input type="checkbox" id="USA" onchange="beskjed()">USA <br>
+        <input type="checkbox" id="India" onchange="beskjed()">India <br>
+        <br>
+        <b id='melding'></b>
+
+
+    </div>
+
+<!--Her finnes eksterne skriptfiler for hver HTML-del.-->
+
+<script src="skript_del1.js"></script>
+
+<script src="skript_del2.js"></script>
+
 </body>
 </html>

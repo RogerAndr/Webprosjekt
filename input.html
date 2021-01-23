@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzabestilling</title>
+</head>
+<body>
+    <h1>Velkommen til denne Pizzarestauranten!</h1>
+    <br> <div class="red"><b>Bunn:</b></div>
+    <br><input type="radio" id="tykk" name="bunn"> Tykk
+    <br><input type="radio" id="tynn" name="bunn"> Tynn
+    <br>
+    <br> <div id='fyll'><b>Fyll:</b></div>
+    <br><input type="radio" id="veggis" name="fyll"> Veggis
+    <br><input type="radio" id="kylling" name="fyll"> Kylling
+    <br><input type="radio" id="biff" name="fyll"> Biff
+    <br>
+    <br> <div class="red"><b>Størrelse:</b></div>
+    <br><input type="radio" id="liten" name="størrelse"> Liten
+    <br><input type="radio" id="medium" name="størrelse"> Medium
+    <br><input type="radio" id="stor" name="størrelse"> Stor
+    <br>
+    <br> <div class="red"><b>Spise:</b></div>
+    <br><input type="radio" id="inne" name="spise"> Inne 
+    <br><input type="radio" id="takeAway" name="spise"> Take away
+    <br>
+    <br>
+    <button id="bestill" onclick="bestilling()">Bestill</button>
+    <br>
+    <i><h4 id="beskjed"></h4></i>
+
+    <script>
+        var btnBestill = document.getElementById('bestill');
+        var beskjedDiv = document.getElementById('beskjed');
+
+        var bunnTykk = document.getElementById('tykk');
+        var bunnTynn = document.getElementById('tynn');
+
+        var fyllVeggis = document.getElementById('veggis');
+        var fyllKylling = document.getElementById('kylling');
+        var fyllBiff = document.getElementById('biff');
+
+        var størrelseLiten = document.getElementById('liten');
+        var størrelseMedium = document.getElementById('medium');
+        var størrelseStor = document.getElementById('stor');
+
+        var spiseInne = document.getElementById('inne');
+        var spiseTakeAway = document.getElementById('takeAway');
+
+        function bestilling(){
+            if ((!bunnTykk.checked && !bunnTynn.checked) || 
+            (!fyllVeggis.checked && !fyllKylling.checked && !fyllBiff.checked) ||
+            (!størrelseLiten.checked && !størrelseMedium.checked && !størrelseStor.checked) ||
+            (!spiseInne.checked && !spiseTakeAway.checked)){
+                beskjedDiv.innerHTML = 'Du har ikke ferdigstilt bestillingen. '
+            }if (!bunnTykk.checked && !bunnTynn.checked){
+                beskjedDiv.innerHTML += 'Velg bunn.';
+
+            } else if (!fyllVeggis.checked && !fyllKylling.checked && !fyllBiff.checked){
+                beskjedDiv.innerHTML += 'Velg fyll.'
+                beskjedDiv.addclassList.
+
+            }
+            
+//Nested IF for kombinatorikk for ferdig bestilling
+            if (bunnTykk.checked){
+                if (fyllVeggis.checked){
+                    if (størrelseLiten.checked){
+                        if (spiseInne.checked){
+                            alert('Du har bestilt: liten veggis med tykk bunn for å spise inne.')
+                        } else if (spiseTakeAway.checked){
+                            alert('Du har bestilt: liten veggis med tykk bunn for å ta med.')
+                        }
+                    }else if (størrelseMedium.checked){
+                        if (spiseInne.checked){
+                            alert('Du har bestilt: medium veggis med tykk bunn for å spise inne.')
+                        } else if (spiseTakeAway.checked){
+                            alert('Du har bestilt: medium veggis med tykk bunn for å ta med.')
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

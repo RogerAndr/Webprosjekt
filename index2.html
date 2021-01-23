@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksjoner</title>
+</head>
+<body>
+    <input type="text" id="tekst"><button onclick="visPopUp()">Lagre</button>
+    <div id="beskjed"></div>
+
+    <script>
+
+function visPopUp(){
+    var inputTekst = document.getElementById('tekst').value;
+    document.getElementById('beskjed').innerHTML = inputTekst + ' er lagret som ditt nye brukernavn <br/><button onclick("lukkPopUp()")>Ok</button>';
+
+}
+
+function lukkPopUp(){
+    document.getElementById('beskjed').innerHTML = '';
+}
+
+    </script>
+    
+</body>
+</html>
